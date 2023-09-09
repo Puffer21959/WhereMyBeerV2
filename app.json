@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "beerlogin",
+    "slug": "beerlogin",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/BeerIcon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/BeerSplash.jpg",
+      "resizeMode": "contain",
+      "backgroundColor": "black"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/BeerIcon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.anonymous.WhereMyBeer",
+      "version_Code": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAfKmEHsgxwQ3IbErdzuFZHK8978U4VJPA"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

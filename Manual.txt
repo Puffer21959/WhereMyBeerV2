@@ -1,0 +1,21 @@
+open xampp
+run apache and MySQL
+
+ใส่ localhost/phpmyadmin ใน url เพื่อเช็ค database
+
+ถ้าไม่มีให้กด import เอา User.sql
+
+ไปเปลี่ยน ip ใน userlogin.js กับ login.js ให้เป็น ip ตัวเอง
+
+เปิด terminal อันที่ 2
+พิมพ์ ls แล้วก็อปชื่อ folder "mysql-nodejs copy"
+พิมพ์ cd "mysql-nodejs copy"
+พิมพ์ npm install nodemon
+
+เอาชื่อ database ไปแก้ใน server.js
+
+npm run dev
+
+run ได้แล้วเอา localhost:3000/api/select ไปเช็คใน url
+
+ถ้าจะหยุด server ให้ Ctrl + c แล้วเลือก Y

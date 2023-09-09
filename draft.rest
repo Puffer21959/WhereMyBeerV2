@@ -1,0 +1,11 @@
+POST  http://localhost:3000/api/insert
+Content-Type: application/json
+
+{
+    "Username":"Username",
+    "Password":"Password",
+    "F_name":"F_name",
+    "L_name":"L_name",
+    "Card_ID":"Card_ID",
+    "Age":1
+}
