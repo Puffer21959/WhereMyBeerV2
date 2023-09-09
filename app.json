@@ -7,7 +7,7 @@
     "icon": "./assets/BeerIcon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/BeerSplash.jpg",
+      "image": "./assets/BeerSplash.png",
       "resizeMode": "contain",
       "backgroundColor": "black"
     },
