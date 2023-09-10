@@ -87,7 +87,12 @@ export default function App() {
 
 
 
-        <Stack.Screen name="Register" component={Login} />
+        <Stack.Screen name="Register" 
+        component={Login} 
+          options={{
+          title: 'Register',
+          headerStyle: {backgroundColor: 'yellow'},
+          headerTitleStyle: {fontWeight: 'bold'}}} />
       </Stack.Navigator>
     </NavigationContainer>
     </UserNameContext.Provider>
