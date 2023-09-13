@@ -1,7 +1,7 @@
 //import react navigator
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Login from './screens/login';
+import Register from './screens/register';
 import { useState, useEffect } from 'react';
 import Userlogin from './screens/userlogin';
 const Stack = createNativeStackNavigator();
@@ -88,7 +88,7 @@ export default function App() {
 
 
         <Stack.Screen name="Register" 
-        component={Login} 
+        component={Register} 
           options={{
           title: 'Register',
           headerStyle: {backgroundColor: 'yellow'},

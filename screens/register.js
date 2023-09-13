@@ -9,7 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 // import axios, { Axios } from 'axios';
 // import * as axios from 'axios';
 // import axios, * as others from 'axios';
-const Login = () => {
+const Register = () => {
     //==================================================================
     // const[Username,Password,F_name,L_name,Card_ID,Age] = useState('')
     const [Username, setusername] = useState('')
@@ -79,7 +79,7 @@ const Login = () => {
         if(Username.length==0||Password.length==0||F_name.length==0||L_name.length==0||Card_ID.length==0||Birth_date.length==0){
             alert("Account Register's Fail please try again!")
         }else{
-            Axios.post("http://192.168.1.102:3000/api/insert", {
+            Axios.post("http://192.168.1.123:3000/api/insert", {
                 Username: Username, Password: Password, F_name: F_name, L_name: L_name, Card_ID: Card_ID, Birth_date: Birth_date
             })
             
@@ -182,7 +182,7 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Register
 
 const styles = StyleSheet.create({
     container: {
