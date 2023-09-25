@@ -13,7 +13,7 @@ const Userlogin = () => {
     const shareParam = useContext(UserNameContext)//declare context
     //fetch func.172.20.10.2
     const fetchUser = async () => {
-        const url = `http://192.168.1.102:3000/api/select?username=${Username}&password=${Password}`;
+        const url = `http://192.168.1.139:3000/api/select?username=${Username}&password=${Password}`;
         const response = await axios.get(url);
         console.log(response.data)
         if (response.data == true) {

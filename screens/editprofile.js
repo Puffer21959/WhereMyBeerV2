@@ -72,7 +72,7 @@ export default function EditProfile() {
       alert("UPDATE Fail please try again!")
     } else {
       
-      Axios.put("http://192.168.1.123:3000/api/update",
+      Axios.put("http://192.168.1.139:3000/api/update",
         {
           Username: Username, Password: Password, F_name: F_name, L_name: L_name, Card_ID: Card_ID, Birth_date: Birth_date,UseForWhere:UseForWhere
 
