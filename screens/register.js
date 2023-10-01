@@ -3,6 +3,7 @@ import { useState, React } from 'react';
 // import { Axios } from 'axios';
 import Axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
+import { Buffer } from 'buffer';
 
 
 
@@ -117,8 +118,8 @@ const Register = () => {
                     maxLength={8}
                     style={styles.input}
                     secureTextEntry
-                    onChangeText={newText => setpassword(newText)}
-                />
+                    onChangeText={newText => setpassword(Buffer.from(newText).toString('base64'))}
+                />{/*convert to base64*/}
                 {/* this line show validate output */}
                 {Passworderr ? <Text style={styles.erorText}>please enter valid password</Text> : null}
                 {/* end */}

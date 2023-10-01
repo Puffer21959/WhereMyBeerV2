@@ -3,12 +3,14 @@ import { useContext, useState, React } from 'react'
 import { UserNameContext } from '../context/UserNameContext'
 import Axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
+import { Buffer } from 'buffer';
 
 export default function EditProfile() {
   const shareParam = useContext(UserNameContext)//declare context as shareParam
-  const UseForWhere = shareParam.SentUsername// store Username into UseForWhere
+  var UseForWhere = shareParam.SentUsername// store Username into UseForWhere
   //console.log(shareParam.SentUsername)
   console.log(UseForWhere)
+  //console.log(Buffer.from(UseForWhere).toString('base64'))//testing base64 encode
 
   const [Username, setusername] = useState('')
   const [Password, setpassword] = useState('')
@@ -77,6 +79,7 @@ export default function EditProfile() {
           Username: Username, Password: Password, F_name: F_name, L_name: L_name, Card_ID: Card_ID, Birth_date: Birth_date,UseForWhere:UseForWhere
 
         })
+        shareParam.setUsername(Username)/*this fix the multiple edit issue*/
         navigation.goBack()
     }
   };
@@ -89,7 +92,7 @@ export default function EditProfile() {
         <TextInput placeholder="Username"
 
           style={styles.input}
-          onChangeText={newText => setusername(newText)}
+          onChangeText={newText => {setusername(newText)}}
 
 
         />
@@ -100,7 +103,7 @@ export default function EditProfile() {
           maxLength={8}
           style={styles.input}
           secureTextEntry
-          onChangeText={newText => setpassword(newText)}
+          onChangeText={newText => setpassword(Buffer.from(newText).toString('base64'))}
         />
         {/* this line show validate output */}
         {Password_check ? <Text style={styles.erorText}>please enter valid password</Text> : null}

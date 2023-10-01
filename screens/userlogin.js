@@ -4,6 +4,7 @@ import { useState, React, useContext } from 'react';
 import { useNavigation } from '@react-navigation/native';// import nev func
 import axios from 'axios';
 import { UserNameContext } from '../context/UserNameContext';
+import { Buffer } from 'buffer';
 
 const Userlogin = () => {
     const navigation = useNavigation();//create navigation func
@@ -50,8 +51,8 @@ const Userlogin = () => {
                         maxLength={8}
                         style={styles.input}
                         secureTextEntry
-                    onChangeText={newText => setpassword(newText)}
-                    />
+                    onChangeText={newText => setpassword(Buffer.from(newText).toString('base64'))}
+                    />{/*convert to base64 */}
                     <View style={styles}>
                     </View>
                     <View style={styles.buttonContainer}
