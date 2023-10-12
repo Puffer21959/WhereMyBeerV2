@@ -20,7 +20,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/BeerIcon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#000000"
       },
       "package": "com.anonymous.WhereMyBeer",
       "version_Code": 1,
@@ -37,6 +37,15 @@
       "eas": {
         "projectId": "6b642554-c42c-4795-bf45-77881b1fa7d3"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-build-properties", {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ]
   }
 }
